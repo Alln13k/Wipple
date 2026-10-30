@@ -5,10 +5,6 @@ description = "A composed desktop companion for Windows"
 authors = ["Wipple"]
 edition = "2021"
 
-[lib]
-name = "wipple_lib"
-crate-type = ["staticlib", "cdylib", "rlib"]
-
 [build-dependencies]
 tauri-build = { version = "2.4.1", features = [] }
 

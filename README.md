@@ -23,4 +23,4 @@ npm run tauri:build  # Windows installer/bundle
 
 ## Windows tooling note
 
-The repository can be linted and browser-built with Node.js alone. `tauri:dev` and `tauri:build` require the Rust toolchain and Windows prerequisites (MSVC build tools and WebView2). On the setup machine used to bootstrap this project, `node v24.22.1` and `npm 11.20.0` were available, but `rustc`, `cargo`, and `rustup` were not on `PATH`, so native Tauri verification could not be run there.
+The repository can be linted and browser-built with Node.js alone. `tauri:dev` and `tauri:build` require the Rust toolchain and Windows prerequisites (MSVC build tools and WebView2). The setup machine initially had no Rust tools; the official Rustup package was installed with `winget`, providing the stable MSVC toolchain (`rustc 1.99.1`, `cargo 1.99.1`). Native Windows bundling now succeeds and produces MSI and NSIS installers. A fresh terminal may be needed to pick up `%USERPROFILE%\.cargo\bin` on `PATH`.
